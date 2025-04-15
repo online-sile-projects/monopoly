@@ -1,0 +1,197 @@
+.board-cell {
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 5px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.board-cell:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 不同位置的格子樣式 */
+.board-cell.top, 
+.board-cell.bottom {
+  height: 100%;
+  width: calc(100% / 11);
+}
+
+.board-cell.left,
+.board-cell.right {
+  width: 100%;
+  height: calc(100% / 9);
+}
+
+/* 不同類型格子的獨特樣式 */
+.board-cell.property .cell-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.property-color {
+  width: 100%;
+  height: 5px;
+  margin-bottom: 2px;
+}
+
+.property-name {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 2px 0;
+}
+
+.property-price {
+  font-size: 0.65rem;
+}
+
+.property-owner {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-top: 2px;
+  border: 1px solid #333;
+}
+
+.property-level {
+  font-size: 0.65rem;
+  margin-top: 2px;
+}
+
+/* 特殊格子樣式 */
+.board-cell.start {
+  background-color: #e8f5e9;
+}
+
+.board-cell.jail {
+  background-color: #ffebee;
+}
+
+.board-cell.parking {
+  background-color: #f5f5f5;
+}
+
+.board-cell.goto-jail {
+  background-color: #ffcdd2;
+}
+
+.board-cell.chance {
+  background-color: #e3f2fd;
+}
+
+.board-cell.tax {
+  background-color: #fff3e0;
+}
+
+/* 不同顏色的地產 */
+.board-cell.brown .property-color {
+  background-color: #795548;
+}
+
+.board-cell.lightblue .property-color {
+  background-color: #81d4fa;
+}
+
+.board-cell.pink .property-color {
+  background-color: #f48fb1;
+}
+
+.board-cell.orange .property-color {
+  background-color: #ffb74d;
+}
+
+.board-cell.red .property-color {
+  background-color: #e57373;
+}
+
+.board-cell.yellow .property-color {
+  background-color: #fff176;
+}
+
+.board-cell.green .property-color {
+  background-color: #81c784;
+}
+
+.board-cell.blue .property-color {
+  background-color: #4fc3f7;
+}
+
+.cell-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2px;
+  width: 100%;
+  height: 100%;
+  font-size: 0.75rem;
+}
+
+.railroad-icon,
+.utility-icon,
+.chance-icon,
+.start-icon,
+.jail-icon,
+.parking-icon,
+.goto-jail-icon,
+.tax-icon {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+
+.railroad-name,
+.utility-name,
+.chance-name,
+.start-name,
+.jail-name,
+.parking-name,
+.goto-jail-name,
+.tax-name {
+  font-size: 0.65rem;
+  font-weight: bold;
+}
+
+/* 回應式設計 */
+@media (max-width: 768px) {
+  .property-name, 
+  .railroad-name,
+  .utility-name,
+  .chance-name,
+  .start-name,
+  .jail-name,
+  .parking-name,
+  .goto-jail-name,
+  .tax-name {
+    font-size: 0.5rem;
+  }
+  
+  .railroad-icon,
+  .utility-icon,
+  .chance-icon,
+  .start-icon,
+  .jail-icon,
+  .parking-icon,
+  .goto-jail-icon,
+  .tax-icon {
+    font-size: 0.9rem;
+  }
+  
+  .property-price,
+  .property-level,
+  .tax-amount {
+    font-size: 0.5rem;
+  }
+}

@@ -1,0 +1,152 @@
+.action-panel {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.game-status {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.round-info, 
+.turn-info {
+  font-size: 1rem;
+}
+
+.current-player {
+  font-weight: bold;
+}
+
+.current-location {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.location-label {
+  color: #666;
+  margin-right: 10px;
+}
+
+.location-name {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.event-container {
+  min-height: 60px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.event-message {
+  padding: 10px;
+  border-left: 4px solid #3498db;
+}
+
+.event-message.move {
+  border-color: #3498db;
+  background-color: #ebf5fb;
+}
+
+.event-message.purchase {
+  border-color: #2ecc71;
+  background-color: #eafaf1;
+}
+
+.event-message.rent {
+  border-color: #e74c3c;
+  background-color: #fdedec;
+}
+
+.event-message.error {
+  border-color: #e67e22;
+  background-color: #fef5e7;
+}
+
+.event-message.game-over {
+  border-color: #9b59b6;
+  background-color: #f4ecf7;
+  font-weight: bold;
+}
+
+.player-name, 
+.cell-name {
+  font-weight: bold;
+}
+
+.bonus-message {
+  color: #27ae60;
+  margin-left: 5px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.property-action,
+.end-turn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.property-action {
+  background-color: #2ecc71;
+  color: white;
+  flex-grow: 2;
+}
+
+.property-action:hover {
+  background-color: #27ae60;
+}
+
+.end-turn {
+  background-color: #e74c3c;
+  color: white;
+  flex-grow: 1;
+}
+
+.end-turn:hover {
+  background-color: #c0392b;
+}
+
+.property-action.disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* 回應式設計 */
+@media (max-width: 768px) {
+  .game-status {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .round-info, 
+  .turn-info {
+    font-size: 0.9rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+}

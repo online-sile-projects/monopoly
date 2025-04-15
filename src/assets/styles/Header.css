@@ -1,0 +1,143 @@
+.game-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.rules-button,
+.reset-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rules-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.rules-button:hover {
+  background-color: #2980b9;
+}
+
+.reset-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: #c0392b;
+}
+
+.rules-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fade-in 0.3s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.rules-panel h2 {
+  margin-top: 0;
+  color: #3498db;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.rules-content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.rules-content h3 {
+  color: #2c3e50;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.rules-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.rules-content li {
+  margin-bottom: 5px;
+}
+
+.close-rules-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-rules-button:hover {
+  background-color: #2980b9;
+}
+
+/* 回應式設計 */
+@media (max-width: 768px) {
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  
+  .rules-button,
+  .reset-button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .rules-content {
+    padding: 15px;
+    margin: 0 15px;
+  }
+}

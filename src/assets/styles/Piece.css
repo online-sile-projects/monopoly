@@ -1,0 +1,77 @@
+.piece {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+
+.piece.animating {
+  z-index: 30;
+}
+
+.piece-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.player-indicator {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background-color: white;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  font-size: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.piece.bankrupt {
+  opacity: 0.5;
+}
+
+/* 棋子動畫效果 */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.piece.animating .piece-content {
+  animation: bounce 0.5s ease infinite;
+}
+
+/* 回應式設計 */
+@media (max-width: 768px) {
+  .piece {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .piece-content {
+    font-size: 0.9rem;
+  }
+  
+  .player-indicator {
+    width: 8px;
+    height: 8px;
+    font-size: 6px;
+  }
+}
