@@ -1,0 +1,34 @@
+# Node
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Env
+.env
+.env.*
+
+# Others
+coverage/
+
+# Local
+*.local.js
+*.local.json
