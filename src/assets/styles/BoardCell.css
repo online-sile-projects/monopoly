@@ -7,9 +7,12 @@
   position: relative;
   padding: 5px;
   background-color: #fff;
+  color: #000; /* 設定預設文字顏色為黑色 */
   transition: all 0.2s ease;
   cursor: pointer;
   overflow: hidden;
+  min-width: 70px;
+  min-height: 70px;
 }
 
 .board-cell:hover {
@@ -22,13 +25,15 @@
 .board-cell.top, 
 .board-cell.bottom {
   height: 100%;
-  width: calc(100% / 10);
+  width: 10%;
+  aspect-ratio: 1 / 1;
 }
 
 .board-cell.left,
 .board-cell.right {
   width: 100%;
-  height: calc(100% / 10);
+  height: 10%;
+  aspect-ratio: 1 / 1;
 }
 
 .board-cell.right {
