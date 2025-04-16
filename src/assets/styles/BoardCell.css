@@ -22,13 +22,18 @@
 .board-cell.top, 
 .board-cell.bottom {
   height: 100%;
-  width: calc(100% / 11);
+  width: calc(100% / 10);
 }
 
 .board-cell.left,
 .board-cell.right {
   width: 100%;
-  height: calc(100% / 9);
+  height: calc(100% / 10);
+}
+
+.board-cell.right {
+  width: 100%;
+  height: calc(100% / 10);
 }
 
 /* 不同類型格子的獨特樣式 */

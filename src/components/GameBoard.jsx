@@ -12,8 +12,8 @@ const GameBoard = () => {
     return null; // 遊戲未開始時不顯示棋盤
   }
 
-  // 棋盤配置: 11x11 方格
-  // 0-10 為上排, 11-20 為右排, 21-30 為下排, 31-39 為左排
+  // 棋盤配置: 10x10 方格，每邊各10格
+  // 0-9 為上排, 10-19 為右排, 20-29 為下排, 30-39 為左排
   const renderBoard = () => {
     if (!board || board.length === 0) return null;
     
@@ -23,8 +23,8 @@ const GameBoard = () => {
     const bottomRow = [];
     const leftCol = [];
     
-    // 填充上排 (0-10)
-    for (let i = 0; i <= 10; i++) {
+    // 填充上排 (0-9)
+    for (let i = 0; i <= 9; i++) {
       topRow.push(
         <BoardCell 
           key={i} 
@@ -34,8 +34,8 @@ const GameBoard = () => {
       );
     }
     
-    // 填充右排 (11-20)
-    for (let i = 11; i <= 20; i++) {
+    // 填充右排 (10-19)
+    for (let i = 10; i <= 19; i++) {
       rightCol.push(
         <BoardCell 
           key={i} 
@@ -45,8 +45,8 @@ const GameBoard = () => {
       );
     }
     
-    // 填充下排 (21-30) - 反向排列
-    for (let i = 30; i >= 21; i--) {
+    // 填充下排 (20-29) - 反向排列
+    for (let i = 29; i >= 20; i--) {
       bottomRow.push(
         <BoardCell 
           key={i} 
@@ -56,8 +56,8 @@ const GameBoard = () => {
       );
     }
     
-    // 填充左排 (31-39) - 反向排列
-    for (let i = 39; i >= 31; i--) {
+    // 填充左排 (30-39) - 反向排列
+    for (let i = 39; i >= 30; i--) {
       leftCol.push(
         <BoardCell 
           key={i} 
