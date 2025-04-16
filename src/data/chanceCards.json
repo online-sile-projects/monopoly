@@ -1,0 +1,51 @@
+[
+  { 
+    "id": "c1", 
+    "description": "銀行發放股息，獲得 $1000", 
+    "type": "money",
+    "amount": 1000
+  },
+  { 
+    "id": "c2", 
+    "description": "你已被選為董事長，付給每位玩家 $500", 
+    "type": "payEachPlayer",
+    "amount": 500
+  },
+  { 
+    "id": "c3", 
+    "description": "前往起點，並獲得 $2000", 
+    "type": "moveToPosition",
+    "position": 0,
+    "collectStartBonus": true
+  },
+  { 
+    "id": "c4", 
+    "description": "你的建築物獲獎，獲得 $1500", 
+    "type": "money",
+    "amount": 1500
+  },
+  { 
+    "id": "c5", 
+    "description": "繳納學費，支付 $1000", 
+    "type": "money",
+    "amount": -1000
+  },
+  { 
+    "id": "c6", 
+    "description": "前往高雄 (位置 3)", 
+    "type": "moveToPosition",
+    "position": 3
+  },
+  { 
+    "id": "c7", 
+    "description": "闖紅燈被罰款，支付 $500", 
+    "type": "money",
+    "amount": -500
+  },
+  { 
+    "id": "c8", 
+    "description": "前往信義區 (位置 39)", 
+    "type": "moveToPosition",
+    "position": 39
+  }
+]

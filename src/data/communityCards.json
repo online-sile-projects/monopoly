@@ -1,0 +1,49 @@
+[
+  { 
+    "id": "m1", 
+    "description": "生日快樂！每位玩家送你 $300", 
+    "type": "collectFromEachPlayer",
+    "amount": 300
+  },
+  { 
+    "id": "m2", 
+    "description": "中了樂透！獲得 $2000", 
+    "type": "money",
+    "amount": 2000
+  },
+  { 
+    "id": "m3", 
+    "description": "看醫生，支付 $800", 
+    "type": "money",
+    "amount": -800
+  },
+  { 
+    "id": "m4", 
+    "description": "銀行利息，獲得 $500", 
+    "type": "money",
+    "amount": 500
+  },
+  { 
+    "id": "m5", 
+    "description": "前往監獄，暫停一回合", 
+    "type": "goToJail"
+  },
+  { 
+    "id": "m6", 
+    "description": "補繳稅款，支付 $1200", 
+    "type": "money",
+    "amount": -1200
+  },
+  { 
+    "id": "m7", 
+    "description": "出售股票獲利，獲得 $1000", 
+    "type": "money",
+    "amount": 1000
+  },
+  { 
+    "id": "m8", 
+    "description": "前往台北 (位置 1)", 
+    "type": "moveToPosition",
+    "position": 1
+  }
+]
