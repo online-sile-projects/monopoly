@@ -14,6 +14,7 @@ const initialState = {
   currentPlayer: 0, // 當前玩家索引
   round: 1,    // 當前輪數
   diceValue: [0, 0], // 骰子值
+  hasDiceRolled: false, // 當前回合是否已經擲過骰子
   event: null, // 當前事件
   modalOpen: false,
   modalContent: null,
