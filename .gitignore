@@ -32,3 +32,18 @@ coverage/
 # Local
 *.local.js
 *.local.json
+
+# Vite 特有
+.vite/
+*.timestamp-*.mjs
+
+# 測試相關
+/cypress/videos/
+/cypress/screenshots/
+/playwright-report/
+/test-results/
+
+# 暫存檔案
+.temp
+.tmp
+.cache/
