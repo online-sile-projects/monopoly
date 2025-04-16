@@ -2,7 +2,8 @@
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 15px;
+  overflow: hidden;
 }
 
 .game-board {
@@ -15,6 +16,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  transform-origin: center;
+  transition: transform 0.3s ease;
 }
 
 .board-top,
@@ -44,17 +47,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   background-color: #f5f9ff;
   border-radius: 8px;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .board-center h1 {
   font-size: 2.5rem;
   color: #2c3e50;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
 }
 
 .board-inner {
@@ -104,11 +110,59 @@
   
   .board-center h1 {
     font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .board-cell .cell-content {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 576px) {
+  .game-board-container {
+    padding: 5px;
+  }
+  
+  .board-center h1 {
+    font-size: 1.5rem;
+  }
+  
+  .board-cell .cell-content {
+    transform: scale(0.85);
+  }
+  
+  .board-top, .board-bottom {
+    height: 18%;
+  }
+  
+  .board-left, .board-right {
+    width: 18%;
+  }
+  
+  .board-middle {
+    height: 64%;
   }
 }
 
 @media (max-width: 480px) {
+  .game-board {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+  
   .board-center h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .board-cell .cell-content {
+    transform: scale(0.75);
+  }
+  
+  .board-center {
+    padding: 5px;
+  }
+  
+  /* 增加觸控體驗 */
+  .board-cell:active {
+    transform: scale(1.1);
   }
 }
