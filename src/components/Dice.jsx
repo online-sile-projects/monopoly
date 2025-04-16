@@ -28,6 +28,12 @@ const Dice = () => {
       return;
     }
     
+    // 檢查是否已經擲過骰子
+    if (state.hasDiceRolled) {
+      alert('本回合已經擲過骰子了，請進行其他動作或結束回合');
+      return;
+    }
+    
     setRolling(true);
     dispatch({ type: 'ROLL_DICE' });
   };
@@ -107,11 +113,11 @@ const Dice = () => {
       </div>
       
       <button 
-        className={`roll-button ${rolling ? 'disabled' : ''}`}
+        className={`roll-button ${rolling || state.hasDiceRolled ? 'disabled' : ''}`}
         onClick={handleRollDice}
-        disabled={rolling}
+        disabled={rolling || state.hasDiceRolled}
       >
-        {rolling ? '擲骰中...' : '擲骰子'}
+        {rolling ? '擲骰中...' : state.hasDiceRolled ? '已擲過骰子' : '擲骰子'}
       </button>
     </div>
   );

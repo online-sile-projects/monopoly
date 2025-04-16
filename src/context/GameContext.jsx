@@ -117,11 +117,22 @@ function gameReducer(state, action) {
       };
       
     case 'ROLL_DICE':
+      // 如果已經擲過骰子，則不允許再次擲骰
+      if (state.hasDiceRolled) {
+        return {
+          ...state,
+          event: {
+            type: 'error',
+            message: '本回合已經擲過骰子了'
+          }
+        };
+      }
       const dice1 = Math.floor(Math.random() * 6) + 1;
       const dice2 = Math.floor(Math.random() * 6) + 1;
       return {
         ...state,
-        diceValue: [dice1, dice2]
+        diceValue: [dice1, dice2],
+        hasDiceRolled: true
       };
       
     case 'MOVE_PLAYER':
@@ -237,7 +248,7 @@ function gameReducer(state, action) {
     case 'NEXT_TURN':
       let nextPlayer = (state.currentPlayer + 1) % state.players.length;
       let nextRound = state.round;
-      
+
       // 如果輪到第一位玩家，回合數+1
       if (nextPlayer === 0) {
         nextRound += 1;
@@ -249,7 +260,9 @@ function gameReducer(state, action) {
         round: nextRound,
         turn: state.turn + 1,
         event: null,
-        modalOpen: false
+        modalOpen: false,
+        hasDiceRolled: false,  // 重置骰子擲出標記
+        diceValue: [0, 0]      // 重置骰子值
       };
       
     case 'SHOW_MODAL':
