@@ -1,0 +1,48 @@
+# Node
+node_modules/
+
+# Build output
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Env
+.env
+.env.*
+
+# Others
+coverage/
+
+# Local
+*.local.js
+*.local.json
+
+# Vite 特有
+.vite/
+*.timestamp-*.mjs
+
+# 測試相關
+/cypress/videos/
+/cypress/screenshots/
+/playwright-report/
+/test-results/
+
+# 暫存檔案
+.temp
+.tmp
+.cache/
